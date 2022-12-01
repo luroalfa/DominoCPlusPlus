@@ -24,12 +24,26 @@ int main()
     cout << "╚═══╝\n";
 
     printf("\x1b[0;30;47m");
+    cout << "╔═══════╦";  // LEFT
+    cout << "═══════╗\n"; // RIGHT
+    cout << "║ ■   ■ ║";  // LEFT
+    cout << " ■   ■ ║\n"; // RIGHT
+    cout << "║ ■   ■ ¤";  // LEFT
+    cout << " ■   ■ ║\n"; // RIGHT
+    cout << "║ ■   ■ ║";  // LEFT
+    cout << " ■   ■ ║\n"; // RIGHT
+    cout << "╚═══════╩";  // LEFT
+    cout << "═══════╝\n"; // RIGHT
+    printf("\x1b[0m");
+
+    printf("\x1b[0;30;47m");
     cout << "╔═══════╦═══════╗\n";
     cout << "║ ■   ■ ║ ■   ■ ║\n";
     cout << "║ ■   ■ ║ ■   ■ ║\n";
     cout << "║ ■   ■ ║ ■   ■ ║\n";
     cout << "╚═══════╩═══════╝\n";
     printf("\x1b[0m");
+
     cout << tab;
     printf("\x1b[0;30;47m");
     cout << "╔═══════╗\n";
