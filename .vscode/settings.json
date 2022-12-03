@@ -36,6 +36,10 @@
   "files.associations": {
     "*.cpp": "cpp",
     "iostream": "cpp",
-    "string": "cpp"
+    "string": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp"
   }
 }

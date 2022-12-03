@@ -7,10 +7,174 @@ private:
     int nodeLeft, nodeRight;
     int pointsValue;
     string tab = "    ";
+    //*Private methods
+    void firstRightRow(int _nodeRight)
+    {
+        switch (_nodeRight)
+        {
+        case 0:
+            cout << "       ║\n"; // RIGHT
+            break;
+        case 1:
+            cout << "       ║\n"; // RIGHT
+            break;
+        case 2:
+            cout << " ■     ║\n"; // RIGHT
+            break;
+        case 3:
+            cout << " ■     ║\n"; // RIGHT
+            break;
+        case 4:
+            cout << " ■   ■ ║\n"; // RIGHT
+            break;
+        case 5:
+            cout << " ■   ■ ║\n"; // RIGHT
+            break;
+        case 6:
+            cout << " ■   ■ ║\n"; // RIGHT
+            break;
+        }
+    }
+    void firstLeftRow(int _nodeLeft)
+    {
+        switch (_nodeLeft)
+        {
+        case 0:
+            cout << "║       ║"; // LEFT
+            break;
+        case 1:
+            cout << "║       ║"; // LEFT
+            break;
+        case 2:
+            cout << "║ ■     ║"; // LEFT
+            break;
+        case 3:
+            cout << "║ ■     ║"; // LEFT
+            break;
+        case 4:
+            cout << "║ ■   ■ ║"; // LEFT
+            break;
+        case 5:
+            cout << "║ ■   ■ ║"; // LEFT
+            break;
+        case 6:
+            cout << "║ ■   ■ ║"; // LEFT
+            break;
+        }
+    }
+    void secondLeftRow(int _nodeLeft)
+    {
+        switch (_nodeLeft)
+        {
+        case 0:
+            cout << "║       ¤"; // LEFT
+            break;
+        case 1:
+            cout << "║   ■   ¤"; // LEFT
+            break;
+        case 2:
+            cout << "║       ¤"; // LEFT
+            break;
+        case 3:
+            cout << "║   ■   ¤"; // LEFT
+            break;
+        case 4:
+            cout << "║       ¤"; // LEFT
+            break;
+        case 5:
+            cout << "║   ■   ¤"; // LEFT
+            break;
+        case 6:
+            cout << "║ ■   ■ ¤"; // LEFT
+            break;
+        }
+    }
+    void secondRightRow(int _nodeRight)
+    {
+        switch (_nodeRight)
+        {
+        case 0:
+            cout << "       ║\n"; // RIGHT
+            break;
+        case 1:
+            cout << "   ■   ║\n"; // RIGHT
+            break;
+        case 2:
+            cout << "       ║\n"; // RIGHT
+            break;
+        case 3:
+            cout << "   ■   ║\n"; // RIGHT
+            break;
+        case 4:
+            cout << "       ║\n"; // RIGHT
+            break;
+        case 5:
+            cout << "   ■   ║\n"; // RIGHT
+            break;
+        case 6:
+            cout << " ■   ■ ║\n"; // RIGHT
+            break;
+        }
+    }
+    void thirdLeftRow(int _nodeLeft)
+    {
+        switch (_nodeLeft)
+        {
+        case 0:
+            cout << "║       ║"; // LEFT
+            break;
+        case 1:
+            cout << "║       ║"; // LEFT
+            break;
+        case 2:
+            cout << "║     ■ ║"; // LEFT
+            break;
+        case 3:
+            cout << "║     ■ ║"; // LEFT
+            break;
+        case 4:
+            cout << "║ ■   ■ ║"; // LEFT
+            break;
+        case 5:
+            cout << "║ ■   ■ ║"; // LEFT
+            break;
+        case 6:
+            cout << "║ ■   ■ ║"; // LEFT
+            break;
+        }
+    }
+    void thirdRightRow(int _nodeRight)
+    {
+        switch (_nodeRight)
+        {
+        case 0:
+            cout << "       ║\n"; // RIGHT
+            break;
+        case 1:
+            cout << "       ║\n"; // RIGHT
+            break;
+        case 2:
+            cout << "     ■ ║\n"; // RIGHT
+            break;
+        case 3:
+            cout << "     ■ ║\n"; // RIGHT
+            break;
+        case 4:
+            cout << " ■   ■ ║\n"; // RIGHT
+            break;
+        case 5:
+            cout << " ■   ■ ║\n"; // RIGHT
+            break;
+        case 6:
+            cout << " ■   ■ ║\n"; // RIGHT
+            break;
+        }
+    }
 
 public:
     Piece(bool _alignVertical, int _nodeLeft, int _nodeRight);
     ~Piece();
+    //*Public methods
     bool getAlignVertical()
     {
         return this->alignVertical;
@@ -55,263 +219,159 @@ public:
             {
             case 0:
                 cout << tab;
-                printf("\x1b[0;30;47m");
+
                 cout << "╔═══════╗\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 break;
             case 1:
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╔═══════╗\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║   ■   ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 break;
             case 2:
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╔═══════╗\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■     ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║     ■ ║\n";
-                printf("\x1b[0m");
                 break;
             case 3:
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╔═══════╗\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■     ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║   ■   ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║     ■ ║\n";
-                printf("\x1b[0m");
                 break;
             case 4:
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╔═══════╗\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 break;
             case 5:
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╔═══════╗\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║   ■   ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 break;
             case 6:
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╔═══════╗\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 break;
             }
 
             cout << tab;
-            printf("\x1b[0;30;47m");
             cout << "╠═══¤═══╣\n";
-            printf("\x1b[0m");
             cout << tab;
 
             switch (this->nodeRight)
             {
             case 0:
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╚═══════╝\n";
-                printf("\x1b[0m");
                 break;
             case 1:
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║   ■   ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╚═══════╝\n";
-                printf("\x1b[0m");
                 break;
             case 2:
-                printf("\x1b[0;30;47m");
                 cout << "║ ■     ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║     ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╚═══════╝\n";
-                printf("\x1b[0m");
                 break;
             case 3:
-                printf("\x1b[0;30;47m");
                 cout << "║ ■     ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║   ■   ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║     ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╚═══════╝\n";
-                printf("\x1b[0m");
                 break;
             case 4:
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║       ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╚═══════╝\n";
-                printf("\x1b[0m");
                 break;
             case 5:
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║   ■   ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╚═══════╝\n";
-                printf("\x1b[0m");
                 break;
             case 6:
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "║ ■   ■ ║\n";
-                printf("\x1b[0m");
                 cout << tab;
-                printf("\x1b[0;30;47m");
                 cout << "╚═══════╝\n";
-                printf("\x1b[0m");
                 break;
             }
         }
         else
         {
+
+            cout << "╔═══════╦═══════╗\n";
+            firstLeftRow(nodeLeft);
+            firstRightRow(nodeRight);
+            secondLeftRow(nodeLeft);
+            secondRightRow(nodeRight);
+            thirdLeftRow(nodeLeft);
+            thirdRightRow(nodeRight);
+            cout << "╚═══════╩═══════╝\n";
         }
     }
 };
@@ -326,7 +386,7 @@ Piece::Piece(bool _alignVertical, int _nodeLeft, int _nodeRight)
     this->nodeRight = _nodeRight;
     this->pointsValue = nodeLeft + nodeRight;
 }
-
+/// @brief This is desctructor
 Piece::~Piece()
 {
 }
