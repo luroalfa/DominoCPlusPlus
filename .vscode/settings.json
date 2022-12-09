@@ -40,6 +40,9 @@
     "array": "cpp",
     "deque": "cpp",
     "vector": "cpp",
-    "string_view": "cpp"
+    "string_view": "cpp",
+    "iomanip": "cpp",
+    "functional": "cpp",
+    "ostream": "cpp"
   }
 }

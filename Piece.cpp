@@ -6,6 +6,7 @@ private:
     bool alignVertical;
     int nodeLeft, nodeRight;
     int pointsValue;
+    string simbol;
     string tab = "    ";
     //*Private methods
     void firstRightRow(int _nodeRight)
@@ -172,7 +173,7 @@ private:
     }
 
 public:
-    Piece(bool _alignVertical, int _nodeLeft, int _nodeRight);
+    Piece(bool _alignVertical, int _nodeLeft, int _nodeRight, string simbol);
     ~Piece();
     //*Public methods
     bool getAlignVertical()
@@ -182,6 +183,13 @@ public:
     void setAlignVertical(bool _alignVertical)
     {
         this->alignVertical = _alignVertical;
+    }
+    void turnAround()
+    {
+        int aux;
+        aux = this->nodeLeft;
+        this->nodeLeft = this->nodeRight;
+        this->nodeRight = aux;
     }
 
     int getNodeLeft()
@@ -202,6 +210,11 @@ public:
         this->nodeRight = _nodeRight;
     }
 
+    string getSimbol()
+    {
+        return this->simbol;
+    }
+
     int getPointsValue()
     {
         return this->pointsValue;
@@ -210,7 +223,7 @@ public:
     {
         this->pointsValue = _pointsValue;
     }
-
+    /// @brief Print a figure of a piece.
     void printModel()
     {
         if (this->alignVertical == true)
@@ -379,12 +392,13 @@ public:
 /// @param _alignVertical
 /// @param _nodeLeft
 /// @param _nodeRight
-Piece::Piece(bool _alignVertical, int _nodeLeft, int _nodeRight)
+Piece::Piece(bool _alignVertical, int _nodeLeft, int _nodeRight, string _simbol)
 {
     this->alignVertical = _alignVertical;
     this->nodeLeft = _nodeLeft;
     this->nodeRight = _nodeRight;
     this->pointsValue = nodeLeft + nodeRight;
+    this->simbol = _simbol;
 }
 /// @brief This is desctructor
 Piece::~Piece()
